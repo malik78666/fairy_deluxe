@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Premium cleaning chemicals and soaps by Fairy Deluxe - eco-friendly solutions for homes and businesses">
+  <title>Fairy Deluxe - Premium Cleaning Solutions</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1500&q=80') no-repeat fixed center,
+                  linear-gradient(to bottom, #f0f8ff, #ffffff);
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                  url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .logo {
+      width: 120px;
+      height: 120px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 25px;
+      font-size: 3em;
+      font-weight: bold;
+      color: #2a90d9;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
+    }
+    .logo:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 4.5em;
+      letter-spacing: 2px;
+    }
+    header p {
+      font-size: 1.8em;
+      margin-top: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.4;
+    }
+    .cta {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .cta a {
+      display: inline-block;
+      background-color: #2a90d9;
+      color: white;
+      padding: 18px 35px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 1.3em;
+      font-weight: 600;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    .cta a:hover {
+      background-color: #1a6ca8;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      border-color: rgba(255,255,255,0.3);
+    }
+    section {
+      padding: 70px 40px;
+      max-width: 1200px;
+      margin: 50px auto;
+      background-color: rgba(255, 255, 255, 0.97);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #2a90d9;
+      font-size: 3em;
+      margin-top: 0;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 5px;
+      background: #2a90d9;
+      margin: 20px auto;
+      border-radius: 3px;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+    .product {
+      background-color: white;
+      border-radius: 20px;
+      padding: 30px;
+      flex: 1 1 calc(33% - 40px);
+      min-width: 300px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: all 0.4s ease;
+      border: 1px solid #eee;
+    }
+    .product:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    .product img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 25px;
+      border: 1px solid #eee;
+    }
+    .product h3 {
+      margin-top: 0;
+      color: #2a90d9;
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+    .product p {
+      color: #555;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+    .features ul {
+      list-style-type: none;
+      padding-left: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .features li {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      position: relative;
+      padding-left: 80px;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+    .features li::before {
+      content: '✓';
+      position: absolute;
+      left: 30px;
+      top: 30px;
+      color: #2a90d9;
+      font-size: 2em;
+      font-weight: bold;
+    }
+    footer {
+      background-color: rgba(230, 247, 255, 0.97);
+      text-align: center;
+      padding: 60px 20px;
+      border-top: 3px solid #2a90d9;
+    }
+    footer h2 {
+      color: #333;
+      margin-bottom: 30px;
+    }
+    footer a {
+      color: #2a90d9;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+    }
+    footer a:hover {
+      text-decoration: underline;
+      color: #1a6ca8;
+    }
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    .contact-method {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      min-width: 250px;
+    }
+    .social-links {
+      margin: 40px 0;
+    }
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: #2a90d9;
+      color: white;
+      border-radius: 50%;
+      margin: 0 15px;
+      font-size: 1.5em;
+      transition: all 0.3s ease;
+    }
+    .social-links a:hover {
+      transform: scale(1.2) translateY(-5px);
+      background: #1a6ca8;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    @media (max-width: 768px) {
+      header {
+        padding: 80px 20px;
+      }
+      header h1 {
+        font-size: 3em;
+      }
+      header p {
+        font-size: 1.3em;
+      }
+      .logo {
+        width: 80px;
+        height: 80px;
+        font-size: 2em;
+      }
+      section {
+        padding: 50px 20px;
+      }
+      h2 {
+        font-size: 2.2em;
+      }
+      .product {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">FD</div>
+    <h1>Fairy Deluxe</h1>
+    <p>Professional Cleaning Solutions for Sparkling Homes & Businesses</p>
+    <div class="cta">
+      <a href="mailto:malikwaheeda24@gmail.com">Email Us</a>
+      <a href="https://wa.me/923197109007?text=I%20would%20like%20a%20quote%20for%20your%20products" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>About Us</h2>
+    <p style="text-align: center; max-width: 900px; margin: 0 auto; font-size: 1.2em;">Fairy Deluxe is a premium manufacturer of cleaning chemicals and hygiene products, dedicated to creating eco-friendly solutions that deliver outstanding results. Our scientifically formulated products combine cutting-edge technology with natural ingredients to provide superior cleaning power while being gentle on surfaces and safe for your family. Trusted by households and commercial establishments across the country, we're committed to raising the standards of cleanliness and hygiene.</p>
+  </section>
+
+  <section>
+    <h2>Our Products</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?auto=format&fit=crop&w=500&q=80" alt="Multi-Surface Cleaner">
+        <h3>Multi-Surface Cleaner</h3>
+        <p>Our advanced formula effortlessly removes grease, grime, and stains from all hard surfaces including countertops, appliances, tiles, and more. Enriched with natural citrus extracts for a fresh, clean scent and powerful degreasing action. Safe for sealed surfaces and leaves no residue.</p>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?auto=format&fit=crop&w=500&q=80" alt="Liquid Hand Soap">
+        <h3>Liquid Hand Soap</h3>
+        <p>Premium antibacterial hand wash enriched with moisturizing aloe vera, vitamin E, and natural essential oils. Gently cleanses while maintaining your skin's natural moisture barrier, leaving hands soft and refreshed. Available in multiple soothing fragrances.</p>
+      </div>
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=500&q=80" alt="Glass & Mirror Spray">
+        <h3>Glass & Mirror Spray</h3>
+        <p>Professional-strength formula delivers flawless, streak-free shine on all glass surfaces. Fast-drying with anti-static properties to repel dust. Perfect for windows, mirrors, glass tables, and shower doors. Leaves behind a light, pleasant fragrance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Why Choose Fairy Deluxe?</h2>
+    <ul>
+      <li>Eco-friendly, biodegradable formulas that protect the environment</li>
+      <li>Dermatologically tested and safe for children and pets</li>
+      <li>Professional-grade cleaning power with gentle, non-toxic ingredients</li>
+      <li>Trusted by over 50,000 satisfied customers nationwide</li>
+      <li>Highly concentrated for better value and reduced packaging waste</li>
+      <li>Pleasant, long-lasting fragrances derived from natural essential oils</li>
+      <li>Manufactured in state-of-the-art facilities with strict quality control</li>
+      <li>Innovative formulas developed by cleaning chemistry experts</li>
+    </ul>
+  </section>
+
+  <footer id="contact">
+    <h2>Contact Us</h2>
+    
+    <div class="contact-info">
+      <div class="contact-method">
+        <h3>Email</h3>
+        <p><a href="mailto:malikwaheeda24@gmail.com">malikwaheeda24@gmail.com</a></p>
+      </div>
+      <div class="contact-method">
+        <h3>WhatsApp</h3>
+        <p><a href="https://wa.me/923197109007?text=I%20would%20like%20a%20quote%20for%20your%20products" target="_blank" rel="noopener">+92 319 7109007</a></p>
+      </div>
+      <div class="contact-method">
+        <h3>Phone</h3>
+        <p><a href="tel:+923197109007">+92 319 7109007</a></p>
+      </div>
+    </div>
+    
+    <div class="social-links">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+    
+    <p style="margin-top: 30px;">&copy; 2025 Fairy Deluxe. All rights reserved.</p>
+  </footer>
+
+  <!-- Font Awesome for social icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
